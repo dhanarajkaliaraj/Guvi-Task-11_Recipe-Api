@@ -21,7 +21,7 @@ app.use(
 
 // Landing page
 app.get("/", (req, res) => {
-  res.send("<h3>Listening port 3000</h3>");
+  res.send("<h3>Port listening</h3>");
 });
 
 // Gets all items from database
