@@ -3,16 +3,16 @@ const mongodb = require("mongodb");
 const mongoose = require("mongoose");
 const cors = require("cors");
 
-const URL = "mongodb://localhost:27017/recipeDB";
+const app = express();
+const dotenv = require("dotenv");
+
+const URL = process.env.DB || "mongodb://localhost:27017/recipeDB";
 mongoose.connect(URL);
 
 const { Recipe } = require("./model/recipe");
-
-const app = express();
-app.use(express.json());
-
 console.log("mongoose connected");
 
+app.use(express.json());
 app.use(
   cors({
     origin: "*",
