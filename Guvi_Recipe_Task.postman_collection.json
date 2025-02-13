@@ -1,0 +1,282 @@
+{
+	"info": {
+		"_postman_id": "6825a184-a713-4684-81d1-67a276a2ff09",
+		"name": "Guvi_Recipe_Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6299874"
+	},
+	"item": [
+		{
+			"name": "Add Recipe",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"recipe1\",\r\n    \"instructions\": \"step1, step2 add recipe1\",\r\n    \"prepTime\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/add-recipe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"add-recipe"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "https://guvi-task-11-recipe-api.onrender.com/add-recipe",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Quinoa Salad with Avocado\",\r\n    \"instructions\": \"In a large bowl, combine cooked quinoa, diced avocado, halved cherry tomatoes, diced cucumber, diced red bell pepper, and crumbled feta cheese.\",\r\n    \"prepTime\": \"10 mins\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/add-recipe",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"add-recipe"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "http://localhost:3000/remove-recipe/67aba19c5ef5a8fe48f4a94a",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://guvi-task-11-recipe-api.onrender.com/remove-recipe/67aba19c5ef5a8fe48f4a94a",
+					"protocol": "https",
+					"host": [
+						"guvi-task-11-recipe-api",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"remove-recipe",
+						"67aba19c5ef5a8fe48f4a94a"
+					]
+				},
+				"description": "Deletes the item from recipe collection by using its ID."
+			},
+			"response": [
+				{
+					"name": "Delete Recipe example",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/remove-recipe/67aba19c5ef5a8fe48f4a94a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"remove-recipe",
+								"67aba19c5ef5a8fe48f4a94a"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Update item",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Salad with Avocado\",\r\n    \"instructions\": \"In a large bowl, combine cooked quinoa, diced avocado, halved cherry tomatoes, diced cucumber, diced red bell pepper, and crumbled feta cheese.\",\r\n    \"prepTime\": \"15 mins\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://guvi-task-11-recipe-api.onrender.com/update-recipe/67aba19c5ef5a8fe48f4a94a",
+					"protocol": "https",
+					"host": [
+						"guvi-task-11-recipe-api",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"update-recipe",
+						"67aba19c5ef5a8fe48f4a94a"
+					]
+				},
+				"description": "Updates specific item from recipe collection by using ID"
+			},
+			"response": [
+				{
+					"name": "Update existing item",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Salad with Avocado\",\r\n    \"instructions\": \"In a large bowl, combine cooked quinoa, diced avocado, halved cherry tomatoes, diced cucumber, diced red bell pepper, and crumbled feta cheese.\",\r\n    \"prepTime\": \"15 mins\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/update-recipe/67aba19c5ef5a8fe48f4a94a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"update-recipe",
+								"67aba19c5ef5a8fe48f4a94a"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Get single item using by its ID",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://guvi-task-11-recipe-api.onrender.com/recipe/67aba19c5ef5a8fe48f4a94a",
+					"protocol": "https",
+					"host": [
+						"guvi-task-11-recipe-api",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"recipe",
+						"67aba19c5ef5a8fe48f4a94a"
+					]
+				},
+				"description": "Gets the individual item from recipe collection by using ID"
+			},
+			"response": [
+				{
+					"name": "https://guvi-task-11-recipe-api.onrender.com/67aba19c5ef5a8fe48f4a94a",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/recipe/67aba19c5ef5a8fe48f4a94a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"recipe",
+								"67aba19c5ef5a8fe48f4a94a"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Get all items from db",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://guvi-task-11-recipe-api.onrender.com/recipes",
+					"protocol": "https",
+					"host": [
+						"guvi-task-11-recipe-api",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"recipes"
+					]
+				},
+				"description": "Gets all recipes items from recipe collection"
+			},
+			"response": [
+				{
+					"name": "https://guvi-task-11-recipe-api.onrender.com/recipes",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/recipes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"recipes"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	]
+}
